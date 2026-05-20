@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharshini | Tech Journey Portfolio</title>
+  <meta name="description" content="Dharshini — Programmer Analyst at Cognizant. Exploring tech through events, certifications, and storytelling.">
+  <meta property="og:title" content="Dharshini | Tech Journey Portfolio">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 3D PARTICLE CANVAS BACKGROUND -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ════════ NAVBAR ════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <span class="nav-logo">D<span class="logo-dot">.</span></span>
+    </div>
+    <nav class="nav-icons">
+      <a href="#events">    <i data-lucide="calendar"></i>   <span>Events</span></a>
+      <a href="#journal">   <i data-lucide="book-open"></i>  <span>Journal</span></a>
+      <a href="#experience"><i data-lucide="briefcase"></i>  <span>Experience</span></a>
+      <a href="#certifications"><i data-lucide="award"></i>  <span>Certs</span></a>
+      <a href="#contact">   <i data-lucide="mail"></i>       <span>Contact</span></a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#events"         class="mobile-link"><i data-lucide="calendar"></i> Events</a>
+    <a href="#journal"        class="mobile-link"><i data-lucide="book-open"></i> Journal</a>
+    <a href="#experience"     class="mobile-link"><i data-lucide="briefcase"></i> Experience</a>
+    <a href="#certifications" class="mobile-link"><i data-lucide="award"></i> Certifications</a>
+    <a href="#contact"        class="mobile-link"><i data-lucide="mail"></i> Contact</a>
+  </div>
+</header>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow fade-up">Programmer Analyst · Cloud Engineer · Storyteller</p>
+    <h1 class="fade-up delay-1"><span id="typing"></span></h1>
+    <p class="hero-sub fade-up delay-2"><em>Learn. Attend. Reflect. Share.</em></p>
+
+    <div class="cta fade-up delay-3">
+      <a href="#events" class="btn btn-primary">
+        <i data-lucide="compass"></i> Explore My Journey
+      </a>
+      <a href="resources/resume.pdf" download class="btn btn-ghost">
+        <i data-lucide="download"></i> Download Resume
+      </a>
+    </div>
+
+    <div class="hero-stats fade-up delay-4">
+      <div class="stat-chip"><span class="stat-num" data-target="8">0</span><span class="stat-label">Events</span></div>
+      <div class="stat-chip"><span class="stat-num" data-target="8">0</span><span class="stat-label">Internships</span></div>
+      <div class="stat-chip"><span class="stat-num" data-target="6">0</span><span class="stat-label">Certifications</span></div>
+      <div class="stat-chip"><span class="stat-num" data-target="2">0</span><span class="stat-label">Years Exp.</span></div>
+    </div>
+
+    <div class="hero-scroll-hint fade-up delay-5">
+      <span>Scroll to explore</span>
+      <i data-lucide="chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ EVENTS ════════ -->
+<section id="events" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Where I've Been</span>
+      <h2>My Event Journey</h2>
+    </div>
+    <div class="events-track fade-up">
+
+      <div class="card">
+        <img src="images/0.jpeg" alt="AWS Summit 2026" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">Cloud</span>
+          <h3>AWS Summit 2026 Bengaluru</h3>
+          <p>Where the scale of cloud infrastructure clicked into place — not as a concept, but as an everyday reality.</p>
+          <a href="events/aws-summit.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/1.jpeg" alt="Data Streaming World Tour 2026" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">Data</span>
+          <h3>Data Streaming World Tour 2026</h3>
+          <p>The moment I understood that real-time data isn't the future — it's already the default.</p>
+          <a href="events/data-streaming.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/aidevcon2.jpeg" alt="AI DevCon" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">AI</span>
+          <h3>AI DevCon — AI Developers Conference & Expo</h3>
+          <p>Two days that made me question what it really takes to build AI for the real world.</p>
+          <a href="events/ai-devcon.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/3.jpeg" alt="AI Memory Matters" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">AI</span>
+          <h3>AI Memory Matters: Building AI apps without a million tokens</h3>
+          <p>The session that changed how I think about memory, context, and efficiency in AI systems.</p>
+          <a href="events/ai-memory.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/4.jpeg" alt="Microsoft AI Tour" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">AI</span>
+          <h3>Microsoft AI Tour</h3>
+          <p>This is where AI stopped feeling like a concept and started feeling like something already around us.</p>
+          <a href="events/microsoft-ai.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/5.jpg" alt="Hello Cognizant" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">Career</span>
+          <h3>Hello Cognizant</h3>
+          <p>Sharing my journey with campus selects was the moment I realized how far I've come — from listener to storyteller.</p>
+          <a href="events/hello-cognizant.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/6.jpeg" alt="BOD Meet" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">Leadership</span>
+          <h3>Board Of Directors Discussion</h3>
+          <p>Sitting close to top-level decision-making showed me how quietly big decisions shape the future.</p>
+          <a href="events/bod.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/7.jpg" alt="44th FIDE Chess Olympiad" loading="lazy">
+        <div class="card-content">
+          <span class="card-tag">Culture</span>
+          <h3>44th FIDE Chess Olympiad</h3>
+          <p>Watching the world's best play live showed me that behind every move is intense coordination and unseen effort.</p>
+          <a href="events/chess.html" class="card-link">Read more <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ JOURNAL ════════ -->
+<section id="journal" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Moments Captured</span>
+      <h2>Event Journal</h2>
+    </div>
+    <div class="journal-layout fade-up">
+
+      <!-- LEFT: TIMELINE -->
+      <div class="timeline">
+
+        <!-- FIX 1: Plain month label row, no box/cluster wrapper -->
+        <div class="timeline-month-label">Timeline</div>
+
+        <div class="timeline-item"
+          data-title="AWS Summit 2026 Bengaluru"
+          data-text="Where the scale of cloud infrastructure clicked into place — not as a concept, but as an everyday reality in Bengaluru."
+          data-images="images/aws3.jpeg,images/aws2.jpeg,images/0.jpeg,images/aws4.jpeg,images/aws5.jpeg,images/aws6.jpeg,images/aws7.jpeg,images/aws8.jpeg,images/aws9.jpeg">
+          <span class="dot dot-featured"></span>
+          <div class="timeline-meta">
+            <strong>April 2026</strong>
+            <p>AWS Summit 2026 Bengaluru</p>
+            <span class="timeline-badge cloud-badge">☁️ Cloud</span>
+          </div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="Data Streaming World Tour"
+          data-text="Real-time data isn't the future — it's already the default. Attended the Bengaluru leg of this global world tour."
+          data-images="images/ds2.jpeg,images/1.jpeg,images/ds3.jpeg,images/ds4.jpeg">
+          <span class="dot"></span>
+          <div class="timeline-meta">
+            <strong>April 2026</strong>
+            <p>Data Streaming World Tour</p>
+            <span class="timeline-badge data-badge">📡 Data</span>
+          </div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="AI DevCon"
+          data-text="Building AI systems for real-world impact — two intense days of workshops, keynotes, and conversations."
+          data-images="images/2.jpeg,images/aidevcon2.jpeg,images/aidevcon3.jpeg,images/aidevcon4.jpeg,images/aidevcon5.jpeg,images/aidevcon6.jpeg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>March 2026</strong><p>AI DevCon</p><span class="timeline-badge ai-badge">🤖 AI</span></div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="AI Memory Matters"
+          data-text="Changed how I think about AI memory and context efficiency — every token counts."
+          data-images="images/aimem2.jpeg,images/aimem3.jpeg,images/aimem4.jpeg,images/aimem5.jpeg,images/aimem6.jpeg,images/aimem7.jpeg,images/aimem8.jpeg,images/aimem10.jpeg,images/aimem11.jpeg,images/3.jpeg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>Jan 2026</strong><p>AI Memory Matters</p><span class="timeline-badge ai-badge">🧠 AI</span></div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="Microsoft AI Tour"
+          data-text="AI started feeling real and already all around us — not a promise, but a presence."
+          data-images="images/4.jpeg,images/microsoft2.jpg,images/microsoft3.jpg,images/microsoft4.jpg,images/microsoft5.jpeg,images/microsoft6.jpeg,images/microsoft7.jpeg,images/microsoft8.jpeg,images/microsoft9.jpeg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>Dec 2025</strong><p>Microsoft AI Tour</p><span class="timeline-badge ai-badge">💡 AI</span></div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="Hello Cognizant"
+          data-text="From listener to storyteller — sharing my own journey with fresh campus selects."
+          data-images="images/5.jpg,images/hello2.jpg,images/hello3.jpg,images/hello4.jpg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>March 2025</strong><p>Hello Cognizant</p><span class="timeline-badge career-badge">🏢 Career</span></div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="Board Of Directors Discussion"
+          data-text="Decisions that quietly shape the future — observed from a seat close to the table."
+          data-images="images/6.jpeg,images/bod2.jpg,images/bod3.jpg,images/bod4.jpg,images/bod5.jpg,images/bod6.jpg,images/bod7.jpg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>Feb 2025</strong><p>BOD Meet</p><span class="timeline-badge lead-badge">📋 Leadership</span></div>
+        </div>
+
+        <div class="timeline-item"
+          data-title="44th FIDE Chess Olympiad"
+          data-text="Discipline, coordination, and unseen effort behind every move at Chennai 2022."
+          data-images="images/7.jpg,images/chess2.jpg,images/chess3.jpg,images/chess4.jpg,images/chess5.jpg,images/chess6.jpg,images/chess7.jpg,images/chess8.jpg,images/chess9.png,images/chess11.png,images/chess10.jpg">
+          <span class="dot"></span>
+          <div class="timeline-meta"><strong>Aug 2022</strong><p>44th FIDE Chess Olympiad</p><span class="timeline-badge culture-badge">♟️ Culture</span></div>
+        </div>
+
+      </div><!-- /timeline -->
+
+      <!-- RIGHT: PREVIEW PANEL — sticky so it stays level with the timeline -->
+      <div class="journal-preview">
+        <div class="slideshow">
+          <img id="journal-img" src="images/8.jpeg" alt="Event image">
+          <button class="prev" aria-label="Previous">&#10094;</button>
+          <button class="next" aria-label="Next">&#10095;</button>
+          <div class="slide-counter" id="slideCounter">1 / 1</div>
+        </div>
+        <div class="thumbnails" id="thumbnails"></div>
+        <h3 id="journal-title">AWS Summit 2026 Bengaluru</h3>
+        <p id="journal-text">Where the scale of cloud infrastructure clicked into place — not as a concept, but as an everyday reality in Bengaluru.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ EXPERIENCE ════════ -->
+<section id="experience" class="section">
+  <div class="container exp-grid">
+
+    <div class="exp-card fade-up">
+      <div class="exp-badge">Current Role</div>
+      <h2>Experience</h2>
+      <div class="role">
+        <h3>Cognizant — Programmer Analyst</h3>
+        <span class="role-period">Aug 2024 – Present</span>
+      </div>
+      <p>Working on enterprise integration systems using TIBCO BW & EMS. Designing scalable, event-driven solutions and handling real-time messaging with exposure to production-grade architectures and system reliability.</p>
+      <div class="exp-line"></div>
+      <div class="tech-tags">
+        <span>TIBCO BW</span><span>TIBCO EMS</span><span>Integration</span><span>API & Workflow</span><span>REST</span><span>SOAP  </span>
+      </div>
+    </div>
+
+    <div class="intern-wrapper">
+      <div class="section-header fade-up">
+        <span class="section-label">Past Experience</span>
+        <h2>Internships</h2>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">SEO Analyst — Funnel Truffle</div>
+        <div class="intern-body">
+          <p>Worked on SEO optimization, keyword research, and improving website ranking.</p>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">R&D Intern — ERNET India</div>
+        <div class="intern-body">
+          <p>Worked on research-driven development and real-world experimentation projects.</p>
+          <a href="resources/ernet.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">Subject Matter Expert</div>
+        <div class="intern-body">
+          <p>Provided domain knowledge and supported content understanding and delivery.</p>
+          <a href="resources/sme.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">IoT Intern — Barola Tech</div>
+        <div class="intern-body">
+          <p>Built IoT prototypes and learned real-world device communication protocols.</p>
+          <a href="resources/iot.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">SEO Writer — Nimetler</div>
+        <div class="intern-body">
+          <p>Created SEO-optimized content improving search visibility and organic reach.</p>
+          <a href="resources/nimetler.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">Digital Content Strategist — Harnium</div>
+        <div class="intern-body">
+          <p>Developed informative blog posts and website content; shaped brand voice and content strategy to drive engagement and organic discovery.</p>
+          <a href="resources/harnium.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">Digital Marketing — IPSR</div>
+        <div class="intern-body">
+          <p>Worked on marketing campaigns, analytics, and content strategy for growth.</p>
+          <a href="resources/ipsr.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="internship fade-up">
+        <div class="intern-head">Content Strategist — Tricaa</div>
+        <div class="intern-body">
+          <p>Planned and executed content strategies for sustained engagement and growth.</p>
+          <a href="resources/tricaa.pdf" class="btn btn-sm">View Certificate</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DIGITAL MARKETING PORTFOLIO ════════ -->
+<section class="section">
+  <div class="container portfolio-box fade-up">
+    <div class="section-header">
+      <span class="section-label">Creative Work</span>
+      <h2>Digital Marketing Portfolio</h2>
+    </div>
+    <p class="port-sub">A curated look at my work across SEO, content strategy, and campaigns.</p>
+
+    <div class="portfolio-showcase">
+      <div class="port-tile port-tile-wide">
+        <div class="port-tile-icon"><i data-lucide="search"></i></div>
+        <h4>SEO Strategy</h4>
+        <p>Keyword research, on-page optimisation, and ranking improvement across multiple brands.</p>
+      </div>
+      <div class="port-tile">
+        <div class="port-tile-icon"><i data-lucide="pen-line"></i></div>
+        <h4>Content Writing</h4>
+        <p>Blog posts, web copy, and long-form articles crafted for both humans and search engines.</p>
+      </div>
+      <div class="port-tile">
+        <div class="port-tile-icon"><i data-lucide="megaphone"></i></div>
+        <h4>Campaigns</h4>
+        <p>End-to-end digital campaigns with measurable growth outcomes.</p>
+      </div>
+      <div class="port-tile">
+        <div class="port-tile-icon"><i data-lucide="bar-chart-2"></i></div>
+        <h4>Analytics</h4>
+        <p>Data-driven insights to refine content and maximise organic traffic.</p>
+      </div>
+    </div>
+
+    <div class="port-actions">
+      <!-- FIX 2: Opens fullscreen modal overlay instead of inline flipbook -->
+      <button class="btn btn-primary" onclick="openPDFModal()">
+        <i data-lucide="book-open"></i> View Full PDF Portfolio
+      </button>
+      <a href="resources/digital-marketing.pdf" download class="btn btn-ghost">
+        <i data-lucide="download"></i> Download PDF
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PDF MODAL OVERLAY (FIX 2) -->
+<div id="pdfModal" class="pdf-modal" role="dialog" aria-modal="true" aria-label="Portfolio PDF viewer">
+  <div class="pdf-modal-backdrop" onclick="closePDFModal()"></div>
+  <div class="pdf-modal-inner">
+    <button class="pdf-modal-close" onclick="closePDFModal()" aria-label="Close">&times;</button>
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Digital Marketing Portfolio</span>
+      <span id="pdfModalPageInfo" class="pdf-page-info"></span>
+    </div>
+    <div class="pdf-modal-canvas-wrap">
+      <button class="pdf-nav pdf-nav-prev" id="pdfPrev" onclick="pdfModalPrev()" aria-label="Previous page">&#10094;</button>
+      <div id="pdfModalCanvas" class="pdf-canvas-area">
+        <div class="pdf-loading" id="pdfLoading">
+          <div class="pdf-spinner"></div>
+          <p>Loading portfolio…</p>
+        </div>
+      </div>
+      <button class="pdf-nav pdf-nav-next" id="pdfNext" onclick="pdfModalNext()" aria-label="Next page">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ CERTIFICATIONS ════════ -->
+<section id="certifications" class="section cert-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Verified Skills</span>
+      <h2>Certifications</h2>
+      <p class="section-desc">Credentials that mark key milestones in my learning journey.</p>
+    </div>
+
+    <div class="cert-featured fade-up">
+      <div class="cert-featured-badge">
+        <div class="cert-featured-icon">
+          <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
+            <path d="M29.76 19.2L32.64 16.32L32.832 15.168C27.984 10.8 20.496 10.512 15.312 14.784C13.824 16.032 12.624 17.568 11.808 19.296L12.816 19.152L18.576 18.192L18.96 17.808C21.648 14.928 25.968 14.544 29.088 17.088L29.76 19.2Z" fill="#EA4335"/>
+            <path d="M36.24 19.344C35.232 15.696 32.736 12.624 29.424 10.752L24 16.32C26.448 18.336 27.84 21.312 27.84 24.48V25.44C30.528 25.44 32.64 27.552 32.64 30.24C32.64 32.928 30.528 34.944 27.84 34.944H24L23.04 35.904V39.264L24 40.224H27.84C33.84 40.224 38.64 35.328 38.64 29.328C38.64 25.392 37.008 21.84 34.08 19.44L36.24 19.344Z" fill="#4285F4"/>
+            <path d="M20.16 40.224H24V34.944H20.16C18.24 34.944 16.56 34.08 15.408 32.736L14.4 33.072L11.52 35.952L11.232 36.96C13.2 38.928 15.936 40.224 18.96 40.224H20.16Z" fill="#34A853"/>
+            <path d="M20.16 18.24C14.16 18.24 9.36 23.136 9.36 29.136C9.36 32.64 10.992 35.76 13.488 37.824L15.888 34.848C14.256 33.744 13.2 31.92 13.2 29.904C13.2 25.776 16.608 22.464 20.64 22.464H20.16V18.24Z" fill="#FBBC05"/>
+          </svg>
+        </div>
+        <div class="cert-featured-ribbon">⭐ Featured</div>
+      </div>
+      <div class="cert-featured-content">
+        <div class="cert-featured-top">
+          <div>
+            <h3 class="cert-featured-title">Google Associate Cloud Engineer</h3>
+            <p class="cert-featured-issuer">Google Cloud · Professional Certification</p>
+          </div>
+          <a href="resources/google-ace.pdf" class="btn btn-primary cert-view-btn">
+            <i data-lucide="external-link"></i> View Certificate
+          </a>
+        </div>
+        <p class="cert-featured-desc">Validates the ability to deploy applications, monitor operations, and manage enterprise solutions on Google Cloud Platform — a core credential for cloud practitioners.</p>
+        <div class="cert-featured-skills">
+          <span>GCP</span><span>Cloud Architecture</span><span>Kubernetes</span><span>IAM</span><span>BigQuery</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-grid fade-up">
+
+      <div class="cert-card">
+        <div class="cert-icon-wrap cert-green">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8 14.5L6 22l6-2 6 2-2-7.5"/></svg>
+        </div>
+        <div class="cert-info">
+          <h4>Lean Six Sigma Green Belt</h4>
+          <p class="cert-issuer">Quality Management</p>
+          <div class="cert-level"><span class="cert-dot" style="background:#22c55e"></span><span class="cert-dot" style="background:#22c55e"></span><span class="cert-dot" style="background:#22c55e"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span></div>
+        </div>
+        <a href="resources/lss-green.pdf" class="cert-card-link"><i data-lucide="external-link"></i></a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon-wrap cert-yellow">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8 14.5L6 22l6-2 6 2-2-7.5"/></svg>
+        </div>
+        <div class="cert-info">
+          <h4>Lean Six Sigma Yellow Belt</h4>
+          <p class="cert-issuer">Quality Management</p>
+          <div class="cert-level"><span class="cert-dot" style="background:#eab308"></span><span class="cert-dot" style="background:#eab308"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span></div>
+        </div>
+        <a href="resources/lss-yellow.pdf" class="cert-card-link"><i data-lucide="external-link"></i></a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon-wrap cert-white-belt">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8 14.5L6 22l6-2 6 2-2-7.5"/></svg>
+        </div>
+        <div class="cert-info">
+          <h4>Lean Six Sigma White Belt</h4>
+          <p class="cert-issuer">Quality Management</p>
+          <div class="cert-level"><span class="cert-dot" style="background:#94a3b8"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span></div>
+        </div>
+        <a href="resources/lss-white.pdf" class="cert-card-link"><i data-lucide="external-link"></i></a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon-wrap cert-github">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.94.57.1.78-.25.78-.55 0-.27-.01-1.17-.01-2.13-3.19.69-3.86-1.37-3.86-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </div>
+        <div class="cert-info">
+          <h4>GitHub Copilot</h4>
+          <p class="cert-issuer">GitHub · AI-Powered Dev</p>
+          <div class="cert-level"><span class="cert-dot" style="background:#7c3aed"></span><span class="cert-dot" style="background:#7c3aed"></span><span class="cert-dot" style="background:#7c3aed"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span></div>
+        </div>
+        <a href="resources/github-copilot.pdf" class="cert-card-link"><i data-lucide="external-link"></i></a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon-wrap cert-boomi">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg>
+        </div>
+        <div class="cert-info">
+          <h4>Boomi Associate Integration Developer</h4>
+          <p class="cert-issuer">Dell Boomi · Integration</p>
+          <div class="cert-level"><span class="cert-dot" style="background:#f97316"></span><span class="cert-dot" style="background:#f97316"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span><span class="cert-dot dim"></span></div>
+        </div>
+        <a href="resources/boomi.pdf" class="cert-card-link"><i data-lucide="external-link"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SKILLS ════════ -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Toolkit</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid fade-up">
+      <div class="skill-box">
+        <div class="skill-icon"><i data-lucide="code-2"></i></div>
+        <h3>Technical</h3>
+        <div class="tags"><span>Python</span><span>JavaScript</span><span>HTML & CSS</span><span>Cloud (GCP)</span><span>SQL</span><span>IoT</span><span>Machine Learning</span><span>Deep Learning</span></div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon"><i data-lucide="wrench"></i></div>
+        <h3>Tools</h3>
+        <div class="tags"><span>Canva</span><span>GitHub</span><span>GitHub Copilot</span><span>Boomi</span><span>TIBCO BW</span><span>TIBCO EMS</span></div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon"><i data-lucide="sparkles"></i></div>
+        <h3>Soft Skills</h3>
+        <div class="tags"><span>Communication</span><span>Team Collaboration</span><span>Problem Solving</span><span>Adaptability</span><span>Collaboration</span><span>Time Management</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT ════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-box fade-up">
+      <div class="section-header">
+        <span class="section-label">Say Hello</span>
+        <h2>Let's Connect</h2>
+      </div>
+      <p class="contact-intro">I'm always open to conversations, collaborations, or just sharing ideas. If something here resonated with you, feel free to reach out.</p>
+      <form action="https://formsubmit.co/dharshinichembian@gmail.com" method="POST" class="contact-form">
+        <div class="form-row">
+          <input type="text"  name="name"  placeholder="Your Name"  required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message <i data-lucide="send"></i></button>
+      </form>
+      <div class="contact-actions">
+        <a href="mailto:dharshinichembian@gmail.com" class="btn btn-ghost"><i data-lucide="mail"></i> Email Directly</a>
+        <a href="https://www.linkedin.com/in/dharshinichembian/" target="_blank" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="footer-rule"></div>
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <div class="footer-monogram">D<span>.</span></div>
+      <p class="footer-tagline">Documenting the journey through tech, learning, and real-world experiences.</p>
+      <div class="footer-social">
+        <a href="mailto:dharshinichembian@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <!-- FIX 3: Inline SVG for LinkedIn — guaranteed to render regardless of Lucide version -->
+        <a href="https://www.linkedin.com/in/dharshinichembian/" target="_blank" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+		<a href="https://github.com/dharshinic" target="_blank" aria-label="GitHub">
+		  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.94.57.1.78-.25.78-.55 0-.27-.01-1.17-.01-2.13-3.19.69-3.86-1.37-3.86-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+		</a>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <h5>Navigate</h5>
+      <a href="#events">Events</a>
+      <a href="#journal">Journal</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-legal-col">
+      <h5>Legal &amp; Resources</h5>
+      <button class="footer-link-btn" onclick="openLegal('terms')">Terms of Use</button>
+      <button class="footer-link-btn" onclick="openLegal('privacy')">Privacy Notice</button>
+      <a href="resources/resume.pdf" download class="footer-link-btn">Download Resume</a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dharshini Chembian. All rights reserved. Original content — unauthorised reproduction not permitted.</p>
+  </div>
+</footer>
+
+<!-- ════════ TERMS MODAL ════════ -->
+<div id="legalModal" class="legal-modal" role="dialog" aria-modal="true" aria-label="Legal information">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="closeLegal()" aria-label="Close">&times;</button>
+    <div id="legalContent"></div>
+  </div>
+</div>
+
+<template id="tpl-terms">
+  <div class="legal-body">
+    <h3>Terms of Use</h3>
+    <p class="legal-date">Effective: January 2026</p>
+    <p>Welcome to Dharshini's portfolio. By accessing or browsing this site, you agree to the following terms.</p>
+    <h4>1. Intellectual Property</h4>
+    <p>All written content, event narratives, photographs, code, and design elements are the original work of Dharshini Chembian and are protected under applicable copyright law. You may not reproduce, redistribute, or repurpose any content without explicit written permission.</p>
+    <h4>2. Personal Use Only</h4>
+    <p>This website is for informational and professional reference only. Commercial use of any content found here is strictly prohibited.</p>
+    <h4>3. External Links</h4>
+    <p>Links to third-party websites (e.g. LinkedIn, event pages) are for convenience only. Dharshini is not responsible for their content or privacy practices.</p>
+    <h4>4. Accuracy</h4>
+    <p>Every effort is made to keep content accurate, but no warranties are made regarding completeness or ongoing accuracy.</p>
+    <h4>5. Changes</h4>
+    <p>These terms may be updated periodically. Continued use of the site constitutes acceptance of any revisions.</p>
+    <h4>6. Contact</h4>
+    <p>For permissions or queries: <a href="mailto:dharshinichembian@gmail.com">dharshinichembian@gmail.com</a></p>
+  </div>
+</template>
+
+<template id="tpl-privacy">
+  <div class="legal-body">
+    <h3>Privacy Notice</h3>
+    <p class="legal-date">Effective: January 2026</p>
+    <p>Your privacy matters. This notice explains what data is collected when you visit this portfolio and how it is handled.</p>
+    <h4>1. Contact Form Data</h4>
+    <p>When you submit the contact form, your name, email address, and message are collected solely to respond to your enquiry. Data is processed via <strong>FormSubmit</strong> (formsubmit.co) and delivered to Dharshini's email. No data is stored on this website's servers.</p>
+    <h4>2. No Tracking or Analytics</h4>
+    <p>This portfolio does not use cookies, advertising trackers, or third-party analytics. No personal data is shared with advertisers or data brokers.</p>
+    <h4>3. Third-Party CDNs</h4>
+    <p>Google Fonts and Lucide Icons are loaded from external CDNs, which may log your IP address as standard infrastructure. Please refer to their privacy policies for details.</p>
+    <h4>4. Data Retention</h4>
+    <p>Contact form submissions are kept only as long as necessary to respond, and are not retained indefinitely.</p>
+    <h4>5. Your Rights</h4>
+    <p>You may request deletion of any personal data you've submitted by contacting: <a href="mailto:dharshinichembian@gmail.com">dharshinichembian@gmail.com</a></p>
+    <h4>6. Updates</h4>
+    <p>This notice may be updated to reflect changes in practice or applicable regulations. The effective date will be revised accordingly.</p>
+  </div>
+</template>
+
+<!-- ════════ IMAGE GALLERY MODAL ════════ -->
+<div id="galleryModal" class="modal" role="dialog" aria-modal="true">
+  <span class="modal-close" id="galleryClose">&times;</span>
+  <img class="modal-img" id="modalImg" alt="Gallery image">
+  <button class="modal-prev" id="modalPrev">&#10094;</button>
+  <button class="modal-next" id="modalNext">&#10095;</button>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+
+<script src="script.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+<button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i data-lucide="arrow-up"></i>
+</button>
+</body>
+</html>
