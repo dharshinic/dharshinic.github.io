@@ -141,3 +141,12 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Large raw assets
+raw-images/
+backup-images/
+*.psd
+*.ai
+*.mp4
+*.mov
+*.zip
