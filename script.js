@@ -307,7 +307,7 @@ if (timelineItems.length > 0) {
     updateImage();
   });
 
-  img?.addEventListener('click', () => openGallery(currentIndex));
+  img?.addEventListener('click', () => openGallery());
 
   // Initial load — first timeline item
   const first = timelineItems[0];
@@ -420,10 +420,6 @@ legalModal?.addEventListener('click', e => {
 
 /* ══════════════════════════════════════════════════════
    12. PDF MODAL OVERLAY
-   Opens a fullscreen modal with a blurred backdrop.
-   PDF.js renders each page onto a <canvas>.
-   Left/right arrow buttons (and keyboard arrows) navigate pages.
-   Clicking the backdrop closes the modal.
 ══════════════════════════════════════════════════════ */
 let _pdfDoc      = null;
 let _pdfPage     = 1;
@@ -493,20 +489,34 @@ function _pdfRender(num) {
     var area = document.getElementById('pdfModalCanvas');
     if (!area) { _pdfRendering = false; return; }
  
-    // Use a fixed safe width — avoids zero-width timing issues entirely
-    var areaWidth = area.offsetWidth;
-    var targetWidth = (areaWidth > 80) ? (areaWidth - 56) : 720;
-    targetWidth = Math.min(targetWidth, 820);
+    var isMobile = window.innerWidth <= 768;
  
-    var vp1   = page.getViewport({ scale: 1 });
-    var scale = targetWidth / vp1.width;
-    var vp    = page.getViewport({ scale: scale });
+    // Get actual rendered dimensions of the area
+    var areaW = area.getBoundingClientRect().width  || area.offsetWidth  || window.innerWidth;
+    var areaH = area.getBoundingClientRect().height || area.offsetHeight || window.innerHeight;
+ 
+    // Fallback for mobile when flex hasn't settled
+    if (areaW < 50) areaW = window.innerWidth;
+    if (areaH < 50) areaH = window.innerHeight * 0.7;
+ 
+    var padding = isMobile ? 16 : 48;
+    var vp1 = page.getViewport({ scale: 1 });
+ 
+    // Scale to fit width, but also ensure height fits
+    var scaleW = (areaW - padding) / vp1.width;
+    var scaleH = (areaH - padding) / vp1.height;
+    var scale  = Math.min(scaleW, scaleH);
+ 
+    // Cap max scale for desktop
+    if (!isMobile) scale = Math.min(scale, 820 / vp1.width);
+ 
+    var vp = page.getViewport({ scale: scale });
  
     var canvas    = document.createElement('canvas');
     canvas.width  = Math.floor(vp.width);
     canvas.height = Math.floor(vp.height);
+    canvas.style.display = 'block';
  
-    // Clear old content, insert new canvas
     area.innerHTML = '';
     area.appendChild(canvas);
  
@@ -516,7 +526,6 @@ function _pdfRender(num) {
     }).promise.then(function() {
       _pdfRendering = false;
       _pdfUpdateButtons();
-      area.scrollTop = 0;
     }).catch(function(e) {
       console.error('PDF render error:', e);
       _pdfRendering = false;
@@ -546,14 +555,13 @@ function _pdfInit() {
  
   _pdfShowLoading();
  
-  // ← UPDATE THIS PATH to match where your PDF actually lives
   pdfjsLib.getDocument('resources/digital-marketing.pdf').promise.then(function(pdf) {
     _pdfDoc  = pdf;
     _pdfPage = 1;
     _pdfRender(_pdfPage);
   }).catch(function(e) {
     console.error('PDF load error:', e);
-    _pdfShowError('Could not load <strong>digital-marketing.pdf</strong>. Check the file name and folder, and make sure you are using a local server (not file://).');
+    _pdfShowError('Could not load <strong>digital-marketing.pdf</strong>. Refresh the page.');
   });
 }
  
@@ -599,3 +607,49 @@ window.addEventListener('load', () => {
     }, { passive: true });
   }
 });
+
+/* ══════════════════════════════════════════════════════
+   EMAILJS CONTACT FORM
+══════════════════════════════════════════════════════ */
+emailjs.init('ZhhJuP6n1To3AJ2Kg');
+
+window.sendEmail = function() {
+  const btn      = document.getElementById('sendBtn');
+  const name     = document.querySelector('input[name="name"]').value.trim();
+  const email    = document.querySelector('input[name="email"]').value.trim();
+  const message  = document.querySelector('textarea[name="message"]').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  emailjs.send('service_5qnc50h', 'template_g0oyjov', {
+    from_name:  name,
+    from_email: email,
+    message:    message
+  })
+  .then(function() {
+    btn.innerHTML = '✓ Message Sent!';
+    btn.style.background = 'linear-gradient(135deg,#10b981,#34d399)';
+    document.getElementById('contactForm').reset();
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  })
+  .catch(function(error) {
+    console.error('EmailJS error:', error);
+    btn.textContent = 'Failed — Try Again';
+    btn.style.background = 'linear-gradient(135deg,#ef4444,#f87171)';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message';
+      btn.style.background = '';
+    }, 3000);
+  });
+};

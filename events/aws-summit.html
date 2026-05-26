@@ -612,27 +612,35 @@
       .blog-figure   { margin-left: -16px; margin-right: -16px; }
       .takeaway      { padding: 30px 20px; }
     }
+    .blog-nav .nav-left {display: flex;align-items: center;gap: 14px;}
+    [data-theme=light] .theme-toggle {background: rgba(79,124,255,0.12) !important;border: 1.5px solid rgba(79,124,255,0.3) !important;color: var(--text-heading) !important;}
+
   </style>
 </head>
 <body>
-
 <div id="progressBar"></div>
-
-<!-- ── NAV ── -->
 <nav class="blog-nav" id="blogNav">
-  <a href="/" class="nav-logo">Dharshini<span>.</span></a>
+  <div class="nav-left">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <a href="/" class="nav-logo">D<span>.</span></a>
+  </div>
   <div class="nav-right">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <span class="nav-tag">Field Notes · 2026</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light mode">☀️</button>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
-
-<div class="mobile-menu" id="mobileMenu" role="navigation">
+<div class="mobile-menu" id="mobileMenu">
   <a href="/" class="mobile-link">← Back to Portfolio</a>
-  <a href="#" class="mobile-link" id="mobileTheme">Toggle Light / Dark</a>
+  <a href="#" class="mobile-link" id="mobileTheme">🌙 Toggle Light / Dark</a>
+  <div class="mobile-divider"></div>
+  <a href="aws-summit.html" class="mobile-link">AWS Summit 2026</a>
+  <a href="data-streaming.html" class="mobile-link">Data Streaming World Tour</a>
+  <a href="ai-devcon.html" class="mobile-link">AI DevCon 2026</a>
+  <a href="ai-memory.html" class="mobile-link">AI Memory Matters</a>
+  <a href="microsoft-ai.html" class="mobile-link">Microsoft AI Tour</a>
+  <a href="hello-cognizant.html" class="mobile-link">Hello Cognizant</a>
+  <a href="bod.html" class="mobile-link">BOD Meeting</a>
+  <a href="chess.html" class="mobile-link">44th FIDE Chess Olympiad</a>
 </div>
 
 <!-- ── HERO ── -->

@@ -186,22 +186,34 @@
     @media(max-width:960px){.blog-nav{padding:14px 32px}.hero{padding:100px 32px 80px}.article-body{padding:0 28px}.people-grid{grid-template-columns:1fr}.stat-row{gap:12px}}
     @media(max-width:700px){.blog-nav{padding:12px 20px}.nav-tag{display:none}.hamburger{display:flex}.hero{padding:90px 24px 72px}.hero-title{font-size:clamp(32px,9vw,48px)}.hero-meta .dot{display:none}.hero-meta{gap:4px;flex-direction:column;font-size:11px}.article-body{padding:0 20px}.scene{padding:64px 0}.blog-figure{margin-left:-20px;margin-right:-20px}.pullquote{margin-left:-20px;margin-right:-20px;padding:28px 24px}.insight-grid{grid-template-columns:1fr}.people-grid{grid-template-columns:1fr}.stat-row{flex-direction:column}.key-idea{padding:28px 22px}.takeaway{padding:36px 24px}.election-card{padding:24px 20px}.er-role{width:100px}#topBtn{bottom:20px;right:20px}.orb-1{width:260px;height:260px}.orb-2{width:200px;height:200px}.orb-3{display:none}}
     @media(max-width:400px){.hero-title{font-size:30px}.article-body{padding:0 16px}.pullquote{margin-left:-16px;margin-right:-16px;padding:24px 18px}.blog-figure{margin-left:-16px;margin-right:-16px}.takeaway{padding:30px 20px}}
+    .blog-nav .nav-left {display: flex;align-items: center;gap: 14px;}
+    [data-theme=light] .theme-toggle {background: rgba(79,124,255,0.12) !important;border: 1.5px solid rgba(79,124,255,0.3) !important;color: var(--text-heading) !important;}  
   </style>
 </head>
 <body>
 <div id="progressBar"></div>
-
 <nav class="blog-nav" id="blogNav">
-  <a href="/" class="nav-logo">Dharshini<span>.</span></a>
+  <div class="nav-left">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <a href="/" class="nav-logo">D<span>.</span></a>
+  </div>
   <div class="nav-right">
-    <span class="nav-tag">Field Notes · 2022</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Switch mode">☀️</button>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <span class="nav-tag">Field Notes · 2026</span>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu" role="navigation">
+<div class="mobile-menu" id="mobileMenu">
   <a href="/" class="mobile-link">← Back to Portfolio</a>
-  <a href="#" class="mobile-link" id="mobileTheme">Toggle Light / Dark</a>
+  <a href="#" class="mobile-link" id="mobileTheme">🌙 Toggle Light / Dark</a>
+  <div class="mobile-divider"></div>
+  <a href="aws-summit.html" class="mobile-link">AWS Summit 2026</a>
+  <a href="data-streaming.html" class="mobile-link">Data Streaming World Tour</a>
+  <a href="ai-devcon.html" class="mobile-link">AI DevCon 2026</a>
+  <a href="ai-memory.html" class="mobile-link">AI Memory Matters</a>
+  <a href="microsoft-ai.html" class="mobile-link">Microsoft AI Tour</a>
+  <a href="hello-cognizant.html" class="mobile-link">Hello Cognizant</a>
+  <a href="bod.html" class="mobile-link">BOD Meeting</a>
+  <a href="chess.html" class="mobile-link">44th FIDE Chess Olympiad</a>
 </div>
 
 <!-- HERO -->

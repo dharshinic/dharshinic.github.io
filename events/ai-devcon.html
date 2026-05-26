@@ -36,8 +36,7 @@
     [data-theme=light] .nav-tag{color:var(--text-muted)}
     .theme-toggle{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--border);background:var(--bg-glass);color:var(--text-heading);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background var(--transition),border-color var(--transition),transform var(--transition);flex-shrink:0}
     .theme-toggle:hover{background:var(--primary-glow);border-color:var(--primary);transform:scale(1.08)}
-    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.85);border-radius:2px;transition:all var(--transition)}
+    .hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;width:36px;height:36px;}    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.85);border-radius:2px;transition:all var(--transition)}
     [data-theme=light] .hamburger span{background:var(--text-heading)}
     .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
@@ -127,6 +126,7 @@
     .shift-col ul li{font-size:14px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--border)}
     .shift-col:last-child ul li{color:var(--text-body)}
     .shift-col ul li:last-child{border-bottom:none}
+    .blog-nav .nav-left {display: flex;align-items: center;gap: 14px;}
     .blog-figure{margin:48px -40px}
     .blog-figure img{width:100%;border-radius:var(--radius-sm);display:block;cursor:zoom-in;box-shadow:var(--shadow-lift);border:1px solid var(--border);transition:transform .5s ease}
     .blog-figure img:hover{transform:scale(1.012)}
@@ -140,22 +140,38 @@
     .tk-tag{font-size:12px;font-weight:600;letter-spacing:.06em;padding:6px 18px;border-radius:50px;border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.88);background:rgba(255,255,255,.10);backdrop-filter:blur(8px)}
     @media(max-width:960px){.blog-nav{padding:14px 32px}.hero{padding:100px 32px 80px}.article-body{padding:0 28px}}
     @media(max-width:700px){.blog-nav{padding:12px 20px}.nav-tag{display:none}.hamburger{display:flex}.hero{padding:90px 24px 72px}.hero-title{font-size:clamp(34px,10vw,52px)}.hero-meta .dot{display:none}.hero-meta{gap:4px;flex-direction:column;font-size:11px}.article-body{padding:0 20px}.scene{padding:64px 0}.blog-figure{margin-left:-20px;margin-right:-20px}.pullquote{margin-left:-20px;margin-right:-20px;padding:28px 24px}.insight-grid{grid-template-columns:1fr}.stat-row{flex-direction:column}.shift-visual{grid-template-columns:1fr}.shift-col:first-child{border-radius:var(--radius-sm) var(--radius-sm) 0 0;border-right:1px solid var(--border);border-bottom:none}.shift-col:last-child{border-radius:0 0 var(--radius-sm) var(--radius-sm);border-left:1px solid var(--border);border-top:none}.shift-arrow{display:none}.takeaway{padding:36px 24px}#topBtn{bottom:20px;right:20px}.orb-1{width:260px;height:260px}.orb-2{width:200px;height:200px}.orb-3{display:none}}
-    @media(max-width:400px){.hero-title{font-size:32px}.article-body{padding:0 16px}.pullquote{margin-left:-16px;margin-right:-16px;padding:24px 18px}.blog-figure{margin-left:-16px;margin-right:-16px}.takeaway{padding:30px 20px}}
-  </style>
+    @media(max-width:400px){.hero-title{font-size:32px}.article-body{padding:0 16px}.pullquote{margin-left:-16px;margin-right:-16px;padding:24px 18px}.blog-figure{margin-left:-16px;margin-right:-16px}.takeaway{padding:30px 20px}} 
+[data-theme=light] .theme-toggle {
+  background: rgba(79,124,255,0.12) !important;
+  border: 1.5px solid rgba(79,124,255,0.3) !important;
+  color: var(--text-heading) !important;
+}
+</style>
 </head>
 <body>
 <div id="progressBar"></div>
 <nav class="blog-nav" id="blogNav">
-  <a href="/" class="nav-logo">Dharshini<span>.</span></a>
-  <div class="nav-right">
-    <span class="nav-tag">Field Notes · 2026</span>
+  <div class="nav-left">
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <a href="/" class="nav-logo">D<span>.</span></a>
+  </div>
+  <div class="nav-right">
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <span class="nav-tag">Field Notes · 2026</span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" class="mobile-link">← Back to Portfolio</a>
-  <a href="#" class="mobile-link" id="mobileTheme">Toggle Light / Dark</a>
+  <a href="#" class="mobile-link" id="mobileTheme">🌙 Toggle Light / Dark</a>
+  <div class="mobile-divider"></div>
+  <a href="aws-summit.html" class="mobile-link">AWS Summit 2026</a>
+  <a href="data-streaming.html" class="mobile-link">Data Streaming World Tour</a>
+  <a href="ai-devcon.html" class="mobile-link">AI DevCon 2026</a>
+  <a href="ai-memory.html" class="mobile-link">AI Memory Matters</a>
+  <a href="microsoft-ai.html" class="mobile-link">Microsoft AI Tour</a>
+  <a href="hello-cognizant.html" class="mobile-link">Hello Cognizant</a>
+  <a href="bod.html" class="mobile-link">BOD Meeting</a>
+  <a href="chess.html" class="mobile-link">44th FIDE Chess Olympiad</a>
 </div>
 <section class="hero">
   <div class="hero-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
@@ -356,29 +372,83 @@
 <div class="img-modal" id="imgModal"><button class="modal-close" id="modalClose">&times;</button><img id="modalImg" src="" alt=""></div>
 <button id="topBtn" aria-label="Back to top">↑</button>
 <script>
-  const html=document.documentElement,toggleBtn=document.getElementById('themeToggle'),mobileBtn=document.getElementById('mobileTheme');
-  const saved=localStorage.getItem('dharshini-theme')||'dark';
+const html = document.documentElement;
+
+function applyTheme(t) {
+  html.setAttribute('data-theme', t);
+  localStorage.setItem('dharshini-theme', t);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+}
+
+// Apply saved theme immediately so no flash
+const saved = localStorage.getItem('dharshini-theme') || 'dark';
+html.setAttribute('data-theme', saved);
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileBtn  = document.getElementById('mobileTheme');
+const nav        = document.getElementById('blogNav');
+const topBtn     = document.getElementById('topBtn');
+const modal      = document.getElementById('imgModal');
+const modalImg   = document.getElementById('modalImg');
+
+document.getElementById('themeToggle').addEventListener('click', function() {
+  const current = html.getAttribute('data-theme');
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+mobileBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  const current = html.getAttribute('data-theme');
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+hamburger.addEventListener('click', function() {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+
+window.addEventListener('load', function() {
   applyTheme(saved);
-  function applyTheme(t){html.setAttribute('data-theme',t);localStorage.setItem('dharshini-theme',t);toggleBtn.textContent=t==='dark'?'☀️':'🌙';toggleBtn.title=t==='dark'?'Switch to light mode':'Switch to dark mode'}
-  function toggleTheme(){applyTheme(html.getAttribute('data-theme')==='dark'?'light':'dark')}
-  toggleBtn.addEventListener('click',toggleTheme);
-  mobileBtn.addEventListener('click',e=>{e.preventDefault();toggleTheme()});
-  const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
-  hamburger.addEventListener('click',()=>{const open=hamburger.classList.toggle('open');mobileMenu.classList.toggle('open',open);hamburger.setAttribute('aria-expanded',open)});
-  window.addEventListener('load',()=>{document.body.classList.add('loaded');revealAll();['hero-eyebrow','hero-title','hero-sub','hero-meta','scroll-cue'].forEach(cls=>{document.querySelector('.'+cls)?.classList.add('show')})});
-  function revealAll(){document.querySelectorAll('.reveal,.reveal-scale').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-60)el.classList.add('show')})}
-  const nav=document.getElementById('blogNav');
-  function handleNav(){nav.classList.toggle('scrolled',window.scrollY>60)}
-  function updateProgress(){const s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('progressBar').style.width=(s/h*100)+'%'}
-  const topBtn=document.getElementById('topBtn');
-  function handleTopBtn(){topBtn.classList.toggle('visible',window.scrollY>400)}
-  topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
-  window.addEventListener('scroll',()=>{revealAll();handleNav();updateProgress();handleTopBtn()},{passive:true});
-  const modal=document.getElementById('imgModal'),modalImg=document.getElementById('modalImg');
-  document.querySelectorAll('.blog-figure img').forEach(img=>{img.addEventListener('click',()=>{modalImg.src=img.src;modal.classList.add('open')})});
-  document.getElementById('modalClose').onclick=()=>modal.classList.remove('open');
-  modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+  document.body.classList.add('loaded');
+  revealAll();
+  ['hero-eyebrow','hero-title','hero-sub','hero-meta','scroll-cue'].forEach(function(cls) {
+    document.querySelector('.' + cls)?.classList.add('show');
+  });
+});
+
+function revealAll() {
+  document.querySelectorAll('.reveal,.reveal-scale').forEach(function(el) {
+    if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('show');
+  });
+}
+
+function handleNav() { nav.classList.toggle('scrolled', window.scrollY > 60); }
+function updateProgress() {
+  const s = document.documentElement.scrollTop;
+  const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('progressBar').style.width = (s / h * 100) + '%';
+}
+function handleTopBtn() { topBtn.classList.toggle('visible', window.scrollY > 400); }
+
+topBtn.onclick = function() { window.scrollTo({top:0, behavior:'smooth'}); };
+
+window.addEventListener('scroll', function() {
+  revealAll(); handleNav(); updateProgress(); handleTopBtn();
+}, {passive: true});
+
+document.querySelectorAll('.blog-figure img').forEach(function(img) {
+  img.addEventListener('click', function() {
+    modalImg.src = img.src;
+    modal.classList.add('open');
+  });
+});
+
+document.getElementById('modalClose').onclick = function() { modal.classList.remove('open'); };
+modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('open'); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') modal.classList.remove('open'); });
 </script>
 </body>
 </html>

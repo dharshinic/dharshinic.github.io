@@ -278,10 +278,9 @@ body.dark .btn-ghost { color: var(--text-heading) !important; }
 .card-link:hover { opacity:1; gap:8px; }
 
 /* ── JOURNAL ── */
-/*
-  FIX 1: layout uses sticky right panel so both columns appear balanced.
-  Left timeline scrolls; right panel stays in view.
-*/
+/*Layout uses sticky right panel so both columns appear balanced.
+  Left timeline scrolls; right panel stays in view.*/
+
 .journal-layout {
   display:grid;
   grid-template-columns: 1fr 1.4fr;
@@ -293,7 +292,7 @@ body.dark .btn-ghost { color: var(--text-heading) !important; }
 /* Timeline */
 .timeline { border-left:2px solid var(--border); padding-left:24px; }
 
-/* FIX 1: Month label — clean divider, no box/border */
+/* Month label — clean divider, no box/border */
 .timeline-month-label {
   font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
   color: var(--primary);
@@ -301,6 +300,7 @@ body.dark .btn-ghost { color: var(--text-heading) !important; }
   margin-bottom:14px; margin-top:4px;
   position:relative;
 }
+
 /* Small left accent line matching the timeline border */
 .timeline-month-label::before {
   content:'';
@@ -350,7 +350,7 @@ body.dark .btn-ghost { color: var(--text-heading) !important; }
 .lead-badge   { background:rgba(245,158,11,.12);   color:#f59e0b; }
 .culture-badge{ background:rgba(239,68,68,.12);    color:#ef4444; }
 
-/* FIX 1: Sticky preview panel — stays in view as timeline scrolls */
+/* Sticky preview panel — stays in view as timeline scrolls */
 .journal-preview {
   background: var(--bg-card); border:1px solid var(--border);
   padding:24px; border-radius: var(--radius-card);
@@ -747,7 +747,7 @@ body.dark .cert-boomi      { background:rgba(234,88,12,.15);   }
 .contact-form button  { width:fit-content; }
 .contact-actions { margin-top:20px; display:flex; gap:14px; flex-wrap:wrap; }
 
-/* FIX 3: contact btn svg fill fix (LinkedIn uses fill not stroke) */
+/* Contact btn svg fill fix (LinkedIn uses fill not stroke) */
 .contact-actions .btn svg[viewBox="0 0 24 24"][fill="currentColor"] {
   stroke: none;
 }
@@ -828,7 +828,8 @@ body.dark .cert-boomi      { background:rgba(234,88,12,.15);   }
   color:rgba(255,255,255,.7);
   transition: background var(--transition), color var(--transition);
 }
-/* FIX 3: footer social icons — both stroke icons and fill icons */
+
+/* Footer social icons — both stroke icons and fill icons */
 .footer-social a svg { width:16px; height:16px; }
 .footer-social a:hover { background: var(--primary); color:#fff; opacity:1; }
 
@@ -894,6 +895,77 @@ body.dark .cert-boomi      { background:rgba(234,88,12,.15);   }
   .cert-featured { padding:20px 16px; }
   .cert-featured-title { font-size:1.15rem; }
   .skills-grid  { grid-template-columns:1fr; }
+}
+
+/* ── PDF MODAL MOBILE ── */
+@media (max-width:768px) {
+  .pdf-modal-inner {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    animation: none !important;
+  }
+  .pdf-modal-canvas-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+  }
+  .pdf-canvas-area {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    padding: 10px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    order: 1;
+  }
+  .pdf-canvas-area canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 6px !important;
+  }
+  .pdf-nav {
+    order: 2;
+    width: 50% !important;
+    height: 52px !important;
+    font-size: 20px !important;
+    border-top: 1px solid var(--border) !important;
+  }
+  .pdf-nav-prev {
+    border-right: 1px solid var(--border) !important;
+    border-left: none !important;
+  }
+  .pdf-nav-next {
+    border-left: none !important;
+  }
+  /* Row at the bottom for both nav buttons */
+  .pdf-modal-canvas-wrap > .pdf-nav-prev,
+  .pdf-modal-canvas-wrap > .pdf-nav-next {
+    flex: 1 !important;
+  }
+}
+ 
+/* Force prev+next into a bottom row on mobile using absolute positioning */
+@media (max-width:768px) {
+  .pdf-modal-canvas-wrap {
+    position: relative !important;
+    padding-bottom: 52px !important;
+  }
+  .pdf-nav {
+    position: absolute !important;
+    bottom: 0 !important;
+    height: 52px !important;
+    width: 50% !important;
+  }
+  .pdf-nav-prev { left: 0 !important; }
+  .pdf-nav-next { right: 0 !important; }
+  .pdf-canvas-area {
+    position: relative !important;
+    height: 100% !important;
+    order: unset !important;
+  }
 }
 
 /* ── BACK TO TOP ── */
